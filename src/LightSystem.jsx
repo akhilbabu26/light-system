@@ -23,6 +23,10 @@ function LightSystem() {
     }
   }
 
+
+
+ const color =["green","green","green","green","green","green","green","green","white"]
+
   return (
     <div
       style={{
@@ -44,7 +48,7 @@ function LightSystem() {
               width: "80px",
               height: "80px",
               border: "2px solid black",
-              backgroundColor: active.includes(index) ? "red":"white",
+              backgroundColor: active.includes(index) ? color[index]:"white",
             }}
           />
         )
