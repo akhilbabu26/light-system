@@ -1,10 +1,10 @@
+
 import React, { useState } from "react"
 
 function LightSystem() {
   const [active, setActive] = useState([])
 
   const handleClick = (i) => {
-    if (active.includes(i)) return
 
     const updated = [...active, i]
     setActive(updated)
@@ -33,7 +33,7 @@ function LightSystem() {
     >
       {Array.from({ length: 9 }).map((_, index) => {
         if (index === 4) {
-          return <div key={index} style={{ width: "80px", height: "80px" }} />
+          return <div key={index} style={{ width: "83.84px", height: "83.84px" }} />
         }
 
         return (
@@ -44,9 +44,7 @@ function LightSystem() {
               width: "80px",
               height: "80px",
               border: "2px solid black",
-              backgroundColor: active.includes(index)
-                ? "red"
-                : "white",
+              backgroundColor: active.includes(index) ? "red":"white",
             }}
           />
         )
